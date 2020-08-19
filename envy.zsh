@@ -56,6 +56,3 @@ commands:
         *) echo "envy: '$command' is not an envy command.\n"; echo "$usage";;
     esac
 )
-    
-
-
