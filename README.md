@@ -1,5 +1,5 @@
 # envy
-## A dead-simple wrapper for Python's venv virtual environments
+A dead-simple wrapper for Python's venv virtual environments
 ---
 
 ## Why?
