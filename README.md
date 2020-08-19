@@ -18,10 +18,10 @@ providing just the utilities that people desire most.
 
 ## Why not `virtualenvwrapper`?
 [`virtualenvwrapper`](https://virtualenvwrapper.readthedocs.io/en/latest/index.html)
-is a Python virtual environment wrapper that is also great at what it does;
-perhaps too good. `virtualenvwrapper` provides facilities for not only the most
-common venv operations, but also for managing venvs automatically via hooks
-that interact with git, tab completion, etc.
+is another Python virtual environment wrapper that is also great at what it
+does; perhaps too good. `virtualenvwrapper` provides facilities for not only
+the most common venv operations, but also for managing venvs automatically via
+hooks that interact with git, tab completion, etc.
 
 If you have a use for that stuff, please go use this excellent tool.
 
