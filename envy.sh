@@ -51,7 +51,7 @@ commands:
 to activate an environment: 
   activate <venv-name>          (Note the lack of 'envy')"
   
-    if [ $1 ]; then command=$1; shift; else echo $usage; exit 0; fi 
+    if [ "$1" ]; then command=$1; shift; else echo "$usage"; exit 0; fi 
     case $command in
         "" | "-h" | "help") echo "$usage";;
         "mk" | "make"  ) make_env "$@";;
