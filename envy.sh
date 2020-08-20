@@ -35,7 +35,7 @@ envy()
     }
 
     list_env_pkgs() { 
-        "$ENVS/$1/bin/pip" list | awk '{print $1}' | tail +3 | column 
+        "$ENVS/$1/bin/pip" list | awk '{print $1" "$2}' | tail +3 | column 
     }
 
     move_env() { "copy_env $1 $2"; "remove_env $1"; }
@@ -50,7 +50,8 @@ commands:
   mv | rename <old> <new>       Rename <old> venv to <new>
 to activate an environment: 
   activate <venv-name>          (Note the lack of 'envy')"
-    command=$1; shift 
+  
+    if [ $1 ]; then command=$1; shift; else echo $usage; exit 0; fi 
     case $command in
         "" | "-h" | "help") echo "$usage";;
         "mk" | "make"  ) make_env "$@";;
