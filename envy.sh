@@ -47,8 +47,9 @@ commands:
   cp | copy <source> <new>      Copy <source> venv to <new>
   rm | remove <env> [<env>...]  Delete one or more <env>
   ls | list [<env>]             List all envs or the packages within <env>
-  mv | rename <old> <new>       Rename <old> venv to <new>"
-
+  mv | rename <old> <new>       Rename <old> venv to <new>
+to activate an environment: 
+  activate <venv-name>          (Note the lack of 'envy')"
     command=$1; shift 
     case $command in
         "" | "-h" | "help") echo "$usage";;
