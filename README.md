@@ -1,5 +1,5 @@
 # envy
-A dead-simple wrapper for managing Python's venv virtual environments.
+A dead-simple wrapper for managing Python virtual environments.
 
 # What?
 `envy` is a *small* library of shell functions and aliases to help manage
