@@ -2,7 +2,7 @@
 A dead-simple wrapper for managing Python virtual environments.
 
 ## What?
-`envy` is a *small* library--just two shell functions and two environment
+`envy` is a tiny library--just two shell functions and two environment
 variables--intended to help manage Python virtual environments, with facilities
 for making, copying, removing, renaming, and listing your environments.
 
