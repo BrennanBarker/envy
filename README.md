@@ -2,14 +2,13 @@
 A dead-simple wrapper for managing Python virtual environments.
 
 # What?
-`envy` is a *small* library of shell functions and aliases to help manage
-Python virtual environments, with facilities for making, copying, removing,
-renaming, and listing your environments.
+`envy` is a *small* library--just two shell functions and two environment
+variables--intended to help manage Python virtual environments, with facilities
+for making, copying, removing, renaming, and listing your environments.
 
-For many people, `envy` might be part of a minimal solution for achieving the
-ease of use of Python version, environment, and package management currently
-provided by much bulkier tools like `conda` or `pyenv +
-pyenv-virtualenvwrapper`.
+For many people, `envy` might be part of a minimal solution for Python version,
+environment, and package management; this is usually done with much bulkier
+tools like `conda` or `pyenv + pyenv-virtualenvwrapper`.
 
 ## Why?
 Python has [a wonderful module](https://docs.python.org/3/library/venv.html) in
@@ -25,12 +24,12 @@ doesn't even provide a facility for activating the virtual environments it
 creates.
 
 This is where `envy` comes in. A dead-simple way to manage your venvs,
-providing just the utilities that people desire most.
+providing just the utilities that people use most.
 
 ## Why not `virtualenvwrapper`?
 [`virtualenvwrapper`](https://virtualenvwrapper.readthedocs.io/en/latest/)
-is another Python virtual environment wrapper that is also great at what it
-does; perhaps too good. `virtualenvwrapper` provides facilities for not only
+is another Python virtual environment wrapper that is very good at what it
+does... perhaps too good. `virtualenvwrapper` provides facilities for not only
 the most common venv operations, but also for managing venvs automatically via
 hooks that interact with git, tab completion, etc.
 
@@ -61,12 +60,13 @@ Python version found somewhere on your system path.
 
 Envy will create a new venv based on your (3.3+) version of Python, and upgrade
 complete with a freshly upgraded pip and setuptools packages so you're ready to
-install anything else that's needed after activating your environment.
+install anything else that's needed (via `pip`) after activating your
+environment.
 
     $ activate <my-new-venv>  # Notice this doesn't start with "envy"!
     (my-new-venv) $ pip install <any> <packages> <you> <need>
 
 `envy` puts all venvs in a single folder, by default `~/code/envs`. You can
-change this by editing the value of `$ENVS` in the `envy.sh` script.  In fact,
+change this by editing the value of `ENVS` in the `envy.sh` script.  In fact,
 I encourage you to take a look at the script and change anything you want; it's
 only a couple dozen lines of code!
