@@ -48,8 +48,9 @@ commands:
   rm | remove <env> [<env>...]  Delete one or more <env>
   ls | list [<env>]             List all envs or the packages within <env>
   mv | rename <old> <new>       Rename <old> venv to <new>
-to activate an environment: 
-  activate <venv-name>          (Note the lack of 'envy')"
+  
+to activate an environment, simply call 'activate' (without envy): 
+  $ activate <env>              (Note the lack of 'envy')"
   
     if [ "$1" ]; then command=$1; shift; else echo "$usage"; exit 0; fi 
     case $command in
