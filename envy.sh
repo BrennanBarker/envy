@@ -50,11 +50,11 @@ commands:
   mv | rename <old> <new>       Rename <old> venv to <new>
   
 to activate an environment, simply call 'activate' (without envy): 
-  $ activate <env>              (Note the lack of 'envy')"
+  $ activate <env>              Activate virtual environment <env>"
   
     if [ "$1" ]; then command=$1; shift; else echo "$usage"; exit 0; fi 
     case $command in
-        "" | "-h" | "help") echo "$usage";;
+        "-h" | "help"  ) echo "$usage";;
         "mk" | "make"  ) make_env "$@";;
         "cp" | "copy"  ) copy_env "$@";;
         "rm" | "remove") remove_env "$@";;
