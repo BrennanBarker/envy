@@ -36,7 +36,7 @@ hooks that interact with git, tab completion, etc.
 If you have a use for that stuff, please go use this excellent tool.
 
 But if you're like most people, you don't need 1000 lines of code to make,
-copy, rename, or list your venvs. You want soemthing dead simple; a minimal
+copy, rename, or list your venvs. You want something dead simple; a minimal
 library you can source into your shell and be off to the races.  That's `envy`.
 
 ## How?
