@@ -11,6 +11,8 @@ envy()
         $PY -m venv "$ENVS/$1"
         echo "upgrading pip and setuptools"
         "$ENVS/$1/bin/pip" install --upgrade pip setuptools
+        echo "installing wheel"
+        "$ENVS/$1/bin/pip" install wheel
     }
 
     copy_env() {
