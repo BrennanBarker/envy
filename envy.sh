@@ -1,4 +1,4 @@
-DEFAULT_PYTHON=python3.7
+DEFAULT_PYTHON=python3.9
 ENVS=$HOME/code/envs
 
 activate() { . "$ENVS/$1/bin/activate"; }
@@ -42,6 +42,11 @@ envy()
 
     move_env() { "copy_env $1 $2"; "remove_env $1"; }
 
+    kernelize_env() {
+        if [ $# -eq 1 ]; then PROFILE='default'; else PROFILE=$2; fi
+        "$ENVS/$1/bin/python" -m ipykernel install --user --name="$1" --profile="$PROFILE" 
+    }
+
     usage="usage: envy <command> [<args>]
 commands:
   -h | help                     Display this message
@@ -50,6 +55,7 @@ commands:
   rm | remove <env> [<env>...]  Delete one or more <env>
   ls | list [<env>]             List all envs or the packages within <env>
   mv | rename <old> <new>       Rename <old> venv to <new>
+  kernelize <env> [<profile>]   Register a jupyter kernel for <env>                    
   
 to activate an environment, simply call 'activate' (without envy): 
   $ activate <env>              Activate virtual environment <env>"
@@ -63,6 +69,7 @@ to activate an environment, simply call 'activate' (without envy):
         "ls" | "list"  ) 
             if [ $# -eq 0 ]; then list_envs; else list_env_pkgs "$@"; fi;;
         "mv" | "move"  ) move_env "$@";;
+        "kernelize"    ) kernelize_env "$@";;
         *) 
             echo "envy: '$command' is not an envy command."
             echo "$usage";;
