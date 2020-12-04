@@ -44,6 +44,7 @@ envy()
 
     kernelize_env() {
         if [ $# -eq 1 ]; then PROFILE='default'; else PROFILE=$2; fi
+        "$ENVS/$1/bin/pip" install ipykernel
         "$ENVS/$1/bin/python" -m ipykernel install --user --name="$1" --profile="$PROFILE" 
     }
 
